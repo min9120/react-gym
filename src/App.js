@@ -1,14 +1,18 @@
 import { Component } from "react";
 import "./App.css";
-import ScrollBox from "./ScrollBox";
-import ValidationInput from "./ValidationInput_ref";
+import ScrollBox from "./ref/ScrollBox";
 
 class App extends Component {
+  //화살표 함수로 한번 감싼다는 것
+  // handleScroll = ()=>{
+  //   this.scrollBox.scrollToBottom()
+  // }
+  // onClick={this.handleScroll}
   render() {
     return (
       <>
-        <ValidationInput />
         <ScrollBox ref={(ref) => (this.scrollBox = ref)} />
+        <br />
         <button onClick={() => this.scrollBox.scrollToBottom()}>
           맨 밑으로
         </button>
