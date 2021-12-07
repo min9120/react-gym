@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./App.css";
+import MemberList from "./immer/MemberList";
 import RandomColor from "./lifecycle/RandomColor";
 //import ScrollBox from "./ref/ScrollBox";
 
@@ -13,12 +14,7 @@ class App extends Component {
   render() {
     return (
       <>
-        {/* <ScrollBox ref={(ref) => (this.scrollBox = ref)} />
-        <br />
-        <button onClick={() => this.scrollBox.scrollToBottom()}>
-          맨 밑으로
-        </button> */}
-        <RandomColor/>
+        <MemberList />
       </>
     );
   }
