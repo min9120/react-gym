@@ -1,20 +1,28 @@
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import About from "./route/About";
 import Home from "./route/Home";
-//import ScrollBox from "./ref/ScrollBox";
-
+import Profile from "./route/Profiles";
 const App = () => {
-  //화살표 함수로 한번 감싼다는 것
-  // handleScroll = ()=>{
-  //   this.scrollBox.scrollToBottom()
-  // }
-  // onClick={this.handleScroll}
-
   return (
     <div>
+      <ul>
+        <li>
+          <Link to ="/">Home</Link>
+        </li>
+        <li>
+          <Link to ="/about">About</Link>
+        </li>
+        <li>
+          <Link to ="/profile/pumpkin">pumpkin의 프로필</Link>
+        </li>
+        <li>
+          <Link to ="/profile/lovekim">lovekim의 프로필</Link>
+        </li>
+      </ul>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />}></Route>
+        <Route path="/about" element={<About />}/>
+        <Route path ="/profile/:username"  element={<Profile />}/>
       </Routes>
     </div>
   );
