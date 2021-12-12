@@ -1,0 +1,38 @@
+.parent {
+  position: relative;
+  animation: 10s linear 1s infinite alternate slidein;
+}
+
+.parent .cloud {
+  position: absolute;
+  transition: width 1s;
+  margin-top: 100px;
+  width: 390px;
+}
+.parent:hover .cloud {
+  width: 500px;
+  /* transition: width 1s; */
+}
+.parent .sun {
+  position: absolute;
+  left: 130px;
+  top: 140px;
+  transition: left 1s, top 1s;
+}
+.parent:hover .sun {
+  top: 40px;
+  left: 300px;
+  /* transition: left 1s, top 1s; */
+}
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+
+    width: 300%;
+  }
+
+  to {
+    margin-left: 100%;
+    width: 100%;
+  }
+}
